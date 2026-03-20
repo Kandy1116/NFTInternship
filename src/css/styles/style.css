@@ -12707,6 +12707,8 @@ a.read_more i {
 .switch {
   margin-bottom: -5px;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   height: 24px;
   width: 44px;
   background-color: #eeeeee;
@@ -13853,7 +13855,8 @@ a.read_more i {
   margin-top: 20px;
 }
 
-.nft__item_share a {
+.nft__item_share a,
+.nft__item_share button {
   font-size: 12px;
   display: inline-block;
   margin: 0 3px 0 3px;
@@ -13866,7 +13869,14 @@ a.read_more i {
   color: #ffffff;
 }
 
-.nft__item_share a:hover {
+.nft__item_share button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.nft__item_share a:hover,
+.nft__item_share button:hover {
   color: #ffffff;
 }
 
@@ -14149,6 +14159,10 @@ a.read_more i {
   border: solid 2px #dddddd;
   z-index: 100;
   color: #0d0c22;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .de_countdown.bg-color-secondary {
@@ -15144,8 +15158,6 @@ a.btn-slider:hover {
 .testi-slider .flex-control-nav li {
   margin: 0 6px;
   display: inline-block;
-  zoom: 1;
-  *display: inline;
 }
 
 .testi-slider .flex-control-paging li a {

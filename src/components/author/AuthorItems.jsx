@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Skeleton from "../UI/Skeleton";
 
 const AuthorItems = ({ items, author, loading }) => {
+
   return (
     <div className="de_tab_content">
       <div className="tab-1">
@@ -34,7 +35,7 @@ const AuthorItems = ({ items, author, loading }) => {
                 </div>
               ))
             : items?.map((item, index) => (
-                <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index} data-aos="fade-in">
                   <div className="nft__item">
                     <div className="author_list_pp">
                       <Link to={`/author/${author.authorId}`}>
@@ -52,15 +53,15 @@ const AuthorItems = ({ items, author, loading }) => {
                           <button>Buy Now</button>
                           <div className="nft__item_share">
                             <h4>Share</h4>
-                            <a href="#" target="_blank" rel="noreferrer">
+                            <button>
                               <i className="fa fa-facebook fa-lg"></i>
-                            </a>
-                            <a href="#" target="_blank" rel="noreferrer">
+                            </button>
+                            <button>
                               <i className="fa fa-twitter fa-lg"></i>
-                            </a>
-                            <a href="#">
+                            </button>
+                            <button>
                               <i className="fa fa-envelope fa-lg"></i>
-                            </a>
+                            </button>
                           </div>
                         </div>
                       </div>

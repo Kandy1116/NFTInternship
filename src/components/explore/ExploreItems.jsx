@@ -69,15 +69,15 @@ const ExploreItems = () => {
                     <button>Buy Now</button>
                     <div className="nft__item_share">
                       <h4>Share</h4>
-                      <a href="#" target="_blank" rel="noreferrer">
+                      <button>
                         <i className="fa fa-facebook fa-lg"></i>
-                      </a>
-                      <a href="#" target="_blank" rel="noreferrer">
+                      </button>
+                      <button>
                         <i className="fa fa-twitter fa-lg"></i>
-                      </a>
-                      <a href="#">
+                      </button>
+                      <button>
                         <i className="fa fa-envelope fa-lg"></i>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -98,8 +98,9 @@ const ExploreItems = () => {
       ) : (
         items.slice(0, visibleItems).map((item, index) => (
           <div
-            key={index}
+            key={item.id}
             className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
+            data-aos="fade-in"
             style={{ display: "block", backgroundSize: "cover" }}
           >
             <div className="nft__item">
@@ -108,12 +109,17 @@ const ExploreItems = () => {
                   to={`/author/${item.authorId}`}
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
+                  title="Creator: Monica Lucas"
                 >
                   <img className="lazy" src={item.authorImage} alt="" />
                   <i className="fa fa-check"></i>
                 </Link>
               </div>
-              {item.expiryDate && <Countdown expiryDate={item.expiryDate} />}
+              {item.expiryDate && (
+                <div className="de_countdown">
+                  <Countdown targetDate={item.expiryDate} />
+                </div>
+              )}
 
               <div className="nft__item_wrap">
                 <div className="nft__item_extra">
@@ -121,15 +127,15 @@ const ExploreItems = () => {
                     <button>Buy Now</button>
                     <div className="nft__item_share">
                       <h4>Share</h4>
-                      <a href="#" target="_blank" rel="noreferrer">
+                      <button>
                         <i className="fa fa-facebook fa-lg"></i>
-                      </a>
-                      <a href="#" target="_blank" rel="noreferrer">
+                      </button>
+                      <button>
                         <i className="fa fa-twitter fa-lg"></i>
-                      </a>
-                      <a href="#">
+                      </button>
+                      <button>
                         <i className="fa fa-envelope fa-lg"></i>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>

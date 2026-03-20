@@ -45,7 +45,7 @@ const Author = () => {
 
   return (
     <div id="wrapper">
-      <div className="no-bottom no-top" id="content">
+      <div className="no-bottom" id="content">
         <div id="top"></div>
 
         <section
