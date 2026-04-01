@@ -1,5 +1,3 @@
-NFT Internship
-
 This is an NFT marketplace internship project that demonstrates building and styling a web-based NFT platform interface using HTML, CSS, and JavaScript.
 
 Tech Stack
